@@ -1,0 +1,47 @@
+.env
+.env.local
+*.env
+
+Thumbs.db
+*.exe
+Desktop.ini
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Go specific
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# Binary folder
+bin/
+tmp/
+
+# Dependencies
+vendor/
+
+# IDE specific
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment files
+.env
+*.env
+.env.local
+
+# Project specific
+_notes/       
+tmp/
+.DS_Store
+
+# Log files
+*.log
