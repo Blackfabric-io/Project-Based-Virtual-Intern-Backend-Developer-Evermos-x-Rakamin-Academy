@@ -42,6 +42,8 @@ vendor/
 _notes/       
 tmp/
 .DS_Store
+/uploads
+
 
 # Log files
 *.log
