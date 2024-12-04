@@ -18,4 +18,13 @@ func InitRoutes(app *fiber.App) {
 	region := app.Group("/api/regions")
 	region.Get("/provinces", regionHandler.GetProvinces)
 	region.Get("/provinces/:provinceID/cities", regionHandler.GetCities)
+
+	uploadHandler := NewUploadHandler()
+	api := app.Group("/api")
+	api.Use(middleware.JWTProtected())
+
+	api.Post("/upload/product", uploadHandler.UploadProductImage)
+	api.Post("/upload/avatar", uploadHandler.UploadAvatar)
+
+	app.Static("/uploads", "./uploads")
 }
