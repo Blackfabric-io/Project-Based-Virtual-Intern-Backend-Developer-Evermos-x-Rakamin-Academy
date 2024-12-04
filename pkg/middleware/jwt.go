@@ -23,4 +23,3 @@ func jwtError(c *fiber.Ctx, err error) error {
 		})
 	}
 }
-

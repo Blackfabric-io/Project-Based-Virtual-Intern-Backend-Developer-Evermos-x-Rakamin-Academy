@@ -22,3 +22,10 @@ func Migrate() {
 	DB.AutoMigrate(&domain.User{})
 }
 
+func Migrate() {
+	DB.AutoMigrate(&domain.User{}, &domain.Store{})
+}
+
+func ConnectDB() {
+	configs.DB.AutoMigrate(&domain.User{})
+}
