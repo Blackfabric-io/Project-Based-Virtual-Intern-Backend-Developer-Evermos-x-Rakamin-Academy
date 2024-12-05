@@ -2,6 +2,8 @@
 
 Proyek ini merupakan implementasi backend API yang saya kembangkan selama program Project Based Virtual Internship batch November 2024 di Evermos x Rakamin. Meski saya tidak menyelesaikan tugas ini dalam rentang 1 bulan sesuai target program PBI Evermos x Rakamin dikarenakan kesibukan kuliah, proyek ini tetap saya selesaikan untuk tujuan pembelajaran dan dokumentasi pembelajaran dalam memberikan pengalaman berharga dalam memahami arsitektur backend yang production-ready.
 
+Pengalaman ini juga memberikan acuan dalam manajemen waktu dalam menyelesaikan proyek, meskipun melebihi tenggat waktu program, pembelajaran dan pengembangan skill tetap prioritas utama.
+
 ## Pembelajaran Utama
 
 Selama pengembangan, saya menerapkan praktek penting tentang:
@@ -31,6 +33,7 @@ Evermos merupakan sebuah platform social commerce reseller, yang menjual berbaga
 ## Tantangan & Solusi
 
 Beberapa tantangan yang saya hadapi:
+- Manajemen waktu antara pengerjaan proyek dan kuliah
 - Memahami konsep baru seperti middleware dan authentication
 - Implementasi relasi database yang kompleks
 
