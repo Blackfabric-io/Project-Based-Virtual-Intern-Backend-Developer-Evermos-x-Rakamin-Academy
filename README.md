@@ -1,11 +1,15 @@
-Repo tugas Golang API
+## Evermos API Project
 
-Melalui tugas ini, kamu akan menguasai
+Proyek ini merupakan implementasi backend API yang saya kembangkan selama program Project Based Virtual Internship batch November 2024 di Evermos x Rakamin. Meski saya tidak menyelesaikan tugas ini dalam rentang 1 bulan sesuai target program PBI Evermos x Rakamin dikarenakan kesibukan kuliah, proyek ini tetap saya selesaikan untuk tujuan pembelajaran dan dokumentasi pembelajaran dalam memberikan pengalaman berharga dalam memahami arsitektur backend yang production-ready.
 
-1. Golang
-2. SQL
-3. Git
-4. Gitlab
+## Pembelajaran Utama
+
+Selama pengembangan, saya menerapkan praktek penting tentang:
+- Implementasi clean architecture di Go
+- Penerapan JWT untuk autentikasi yang aman
+- Manajemen database dengan GORM
+- Penggunaan Fiber framework untuk REST API
+- Integrasi dengan API Static eksternal 
 
 ## Latar Belakang Tugas
 
@@ -17,46 +21,22 @@ Evermos merupakan sebuah platform social commerce reseller, yang menjual berbaga
 4. Install MySQL/MariaDB, Link : https://dev.mysql.com/downloads/installer/
 5. Install Postman, Link : https://www.postman.com/downloads/
 
-## Tahapan Pengerjaan
+## Skill Dipelajari
 
-1. Download soal dan ketentuan pembuatan pada sumber daya
-2. Kerjakan soal dan Ikuti setiap perintah ketentuan pada dokumen yang bisa didownload pada sumber daya.
-3. Lalu unggah satu file dokumen dengan isi link github project anda dengan format : " MiniProject-NamaAnda.docx" ini di bagian "Submit Hasil Pengerjaanmu"
+1. Golang
+2. SQL
+3. Git
+4. Gitlab
 
-Jika ada pertanyaan yang ingin dibahas ketika sesi Live Mentoring bersama mentor, silahkan submit pertanyaanmu pada link: [https://bit.ly/VIX033](https://bit.ly/VIX033)
+## Tantangan & Solusi
 
-Silahkan baca aturan bertanya agar pertanyaanmu dijawab oleh mentor. Jika tidak mengikuti aturan, maka pertanyaanmu tidak akan dijawab.
-Silahkan baca peraturannya pada link berikut: [bit.ly/peraturan-bertanya](http://bit.ly/peraturan-bertanya)
+Beberapa tantangan yang saya hadapi:
+- Memahami konsep baru seperti middleware dan authentication
+- Implementasi relasi database yang kompleks
 
-Notes: Sesi Live Mentoring tersedia bagi pengguna VIP Access. Jika kamu pengguna Free Access dan ingin pertanyaanmu dijawab oleh mentor, silahkan upgrade VIP Access pada card/section 'Live Mentoring' atau pada section 'Certificate'.
+## Acknowledgments
 
-[PDF](01-backend-evermos-rpbi/2-company-assignment/Golang%20API%20%20Mini%20Project/Soal_dan_Ketentuan_Sumber_Daya.pdf)
-
-Here is a summary of the PDF file **Soal_dan_Ketentuan_Sumber_Daya.pdf**:
-
-### **Tasks:**
-
-1. **Service Development**
-   - Develop services for login and registration. [1]
-   - Automatically create a store when a user registers. [1]
-   - Create services for account management, store management, address management, and category management. [1]
-   - Ensure that only admin can manage categories by directly changing the admin status in the database. [1]
-   - Develop services for product and transaction management. [1]
-
-2. **Requirements:**
-   - Implement routing as per the provided collection from GitHub. [1]
-   - Use JWT for authentication. [1]
-   - Include an API for file uploads. [1]
-   - Ensure that addresses are necessary for product delivery. [1]
-   - Implement pagination, filtering data, and restrict user access to only their own data. [1]
-   - Log product transactions in a separate table. [1]
-   - Apply clean architecture. [1]
-
-### **Resources:**
-
-1. **Data Sources:**
-   - Use the provided API for regional data. [1]
-   - Configure MySQL as per the given guide. [1]
-   - Follow the provided database design. [1]
-
-This summary encapsulates the core ideas, key points, and highlights from the PDF content, structured logically for clarity.
+Special thanks to:
+- Evermos for providing this learning opportunity
+- Rakamin Academy for facilitating the internship program
+- The mentors who provided guidance throughout the project
