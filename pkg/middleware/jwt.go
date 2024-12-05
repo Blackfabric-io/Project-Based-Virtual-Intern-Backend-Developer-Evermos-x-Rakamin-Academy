@@ -7,7 +7,7 @@ import (
 
 func AuthRequired() fiber.Handler {
 	return jwt.New(jwt.Config{
-		SigningKey: []byte("secret"),
+		SigningKey: []byte("JWT_SECRET"),
 		ErrorHandler: jwtError,
 	})
 }

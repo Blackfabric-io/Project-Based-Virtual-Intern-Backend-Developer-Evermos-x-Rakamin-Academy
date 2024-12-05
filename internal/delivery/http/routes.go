@@ -4,15 +4,24 @@ import (
 	"evermos-project/pkg/middleware"
 
 	"github.com/gofiber/fiber/v2"
+	"gorm.io/gorm"
 )
 
-func InitRoutes(app *fiber.App) {
+func InitRoutes(app *fiber.App, db *gorm.DB) {
+	productRepo := repository.NewProductRepository(db)
+
+	productUsecase := usecase.NewProductUsecase(productRepo)
+
+	productHandler := NewProductHandler(productUsecase)
+
 	app.Post("/auth/register", Register)
 	app.Post("/auth/login", Login)
 
 	api := app.Group("/api")
 	api.Use(middleware.JWTProtected())
 	api.Get("/profile", GetProfile)
+	products := api.Group("/products")
+	products.Get("/", productHandler.GetProducts)
 
 	regionHandler := NewRegionHandler()
 	region := app.Group("/api/regions")
