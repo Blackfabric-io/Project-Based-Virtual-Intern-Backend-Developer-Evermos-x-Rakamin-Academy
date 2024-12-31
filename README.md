@@ -1,46 +1,107 @@
 # Halted
-## Evermos API Project
+Pass the given submission time by Rakamin (1 month), but I still work on this anyway as side-project
+## 🔄 Project Status
 
-Proyek ini merupakan implementasi backend API yang dikembangkan selama program Project Based Virtual Internship batch November 2024 di Evermos x Rakamin. Meski saya tidak menyelesaikan tugas ini dalam rentang 1 bulan sesuai target program PBI Evermos x Rakamin dikarenakan kesibukan kuliah, proyek ini tetap saya selesaikan untuk tujuan pembelajaran dan dokumentasi pembelajaran dalam memberikan pengalaman berharga dalam memahami arsitektur backend yang production-ready.
+**Current completion: ~50%**
 
-Pengalaman ini juga memberikan acuan dalam manajemen waktu dalam menyelesaikan proyek, meskipun melebihi tenggat waktu program, pembelajaran dan pengembangan skill tetap prioritas utama.
+✅ Completed:
+- Basic authentication
+- Product management
+- Regional integration
+- File upload structure
 
-## Pembelajaran Utama
+🚧 In Progress:
+- Store management
+- Category system
+- Transaction processing
+- Product logging
 
-Selama pengembangan, saya menerapkan praktek penting tentang:
-- Implementasi clean architecture di Go
-- Penerapan JWT untuk autentikasi yang aman
-- Manajemen database dengan GORM
-- Penggunaan Fiber framework untuk REST API
-- Integrasi dengan API Static eksternal 
+# Evermos E-commerce API
 
-## Latar Belakang Tugas
+A RESTful API service built with Go for Evermos, a Muslim-focused social commerce platform. This project implements clean architecture principles and provides essential e-commerce functionalities.
 
-Evermos merupakan sebuah platform social commerce reseller, yang menjual berbagai macam produk-produk Muslim Indonesia. Evermos ini memiliki fitur-fitur seperti katalog barang, toko online,distributor.  Untuk itu Anda sebagai developer Evermos diminta untuk dapat membuat service sederhana yang dapat membuat transaksi penjualan di Evermos. Anda diminta untuk membuat service tersebut menggunakan Golang, database Mysql lalu mendokumentasikannya.
+## 🌟 Features
 
-1. Install Bahasa Golang, Link : https://go.dev/doc/install
-2. Install Framework Fiber, Link : https://docs.gofiber.io/
-3. Install GORM, Link : https://gorm.io/
-4. Install MySQL/MariaDB, Link : https://dev.mysql.com/downloads/installer/
-5. Install Postman, Link : https://www.postman.com/downloads/
+### Core Services
+- **Authentication**
+  - User registration with automatic store creation
+  - JWT-based authentication
+  - Profile management
+  
+- **Product Management**
+  - Product CRUD operations
+  - Advanced filtering and pagination
+  - Category-based organization
+  - Price range filtering
 
-## Skill Dipelajari
+- **Location Services**
+  - Integration with Indonesian Regional API
+  - Province and city data management
+  - Address validation
 
-1. Golang
-2. SQL
-3. Git
-4. Gitlab
+- **File Management**
+  - Product image upload
+  - User avatar management
 
-## Tantangan & Solusi
+## 🏗 Architecture
 
-Beberapa tantangan yang saya hadapi:
-- Manajemen waktu antara pengerjaan proyek dan kuliah
-- Memahami konsep baru seperti middleware dan authentication
-- Implementasi relasi database yang kompleks
+The project follows Clean Architecture principles with the following layers:
+```go
+├── domain          # Enterprise business rules
+├── repository      # Database operations
+├── usecase         # Application business rules
+└── delivery        # External interfaces (HTTP handlers)
+```
 
-## Acknowledgments
+## 🛠 Tech Stack
 
-Special thanks to:
-- Evermos for providing this learning opportunity
-- Rakamin Academy for facilitating the internship program
-- The mentors who provided guidance throughout the project
+- **Backend:** Go 1.19+
+- **Database:** MySQL
+- **Authentication:** JWT
+- **API Documentation:** Swagger/OpenAPI
+- **Development Tools:** Git, Make
+
+## 📋 Prerequisites
+
+- Go 1.19 or higher
+- MySQL 8.0+
+- Make (optional, for using Makefile commands)
+
+## 🚀 Getting Started
+
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/evermos-api.git
+```
+
+2. Set up environment variables
+```bash
+cp .env.example .env
+# Edit .env with your configurations
+```
+
+3. Install dependencies
+```bash
+go mod download
+```
+
+4. Run migrations
+```bash
+make migrate
+```
+
+5. Start the server
+```bash
+make run
+```
+
+## 📝 API Documentation
+
+API documentation is available at `/swagger/index.html` when running the server.
+
+Key endpoints:
+- `POST /auth/register` - User registration
+- `POST /auth/login` - User authentication
+- `GET /products` - List products with filtering
+- `POST /products` - Create new product
+- `GET /regions` - Get regional data
